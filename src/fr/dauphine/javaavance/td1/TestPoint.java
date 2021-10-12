@@ -6,9 +6,9 @@ public class TestPoint {
 		// TODO Auto-generated method stub
 		//Point p = new Point();
 		//System.out.println(p.x+" "+p.y);
-		/**Point.affiche(1,2);
+		Point.affiche(1,2);
 		Point.compare();
-		Point.exo3_3();**/
+		Point.exo3_3();
 		
 		Polyline pl= new Polyline(1);
 		Point p1=new Point(1, 2);
