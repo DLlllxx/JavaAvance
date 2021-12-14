@@ -7,6 +7,7 @@ package td4;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Objects;
 
 public class garage {
@@ -67,17 +68,15 @@ public class garage {
  * @param garage
  * @return la premi¨¨re voiture
  */
-public Car firstCarByBrand(garage garage)
+public Car firstCarByBrand(String brand)
 {
-if(garage.getG()==null)
-{
-	throw new NullPointerException("Le garage est null");
-}
-else {
-	Car car = garage.getG().get(0);
-	System.out.println(" The brand of first car: "+car.getBrand());
-	return car;
-}
+	for (Car v : g) {
+		 if (v.getBrand().equals(brand)) {
+			 System.out.println(v.toString());
+			 return v;
+		 }	                
+	 }
+	 throw new NoSuchElementException();
 }
 public ArrayList<Car> getG() {
 	return g;
@@ -88,5 +87,7 @@ public void setG(ArrayList<Car> g) {
 public static void setId(int id) {
 	garage.id = id;
 }
-
+public boolean equals(garage g) {
+	return this.g.equals(g);
+}
 }

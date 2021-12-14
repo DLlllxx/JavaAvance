@@ -35,6 +35,11 @@ public class Car {
 		return "Car [brand=" + brand + ", value=" + value + "]";
 	}
 	
+	public boolean equals(Car c) {
+		return c.getBrand() == this.getBrand() && c.getValue() == this.getValue();
+	}
+	
+
 	
 	
 	
