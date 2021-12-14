@@ -42,6 +42,7 @@ public class main {
 		HashSet<Car> set = new HashSet<Car>();
 		set.add(b);
 		System.out.println(set.contains(c));
+		//oui parce que on a pas ajouter c dans le set donc le r¨¦sultat est false
 	}
 
 }
